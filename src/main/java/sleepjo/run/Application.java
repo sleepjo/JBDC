@@ -1,6 +1,7 @@
 package sleepjo.run;
 
 import sleepjo.model.dao.MenuDAO;
+import sleepjo.model.dto.MenuDTO;
 
 import java.sql.Connection;
 import java.util.Scanner;
@@ -8,10 +9,13 @@ import java.util.Scanner;
 import static sleepjo.common.JDBCTemplate.getConnection;
 
 public class Application {
+
+    static MenuDAO registDAO;
+    static Connection con;
     public static void main(String[] args) {
 
-        Connection con = getConnection();
-        MenuDAO registDAO = new MenuDAO();
+        con = getConnection();
+        registDAO = new MenuDAO();
         Scanner sc = new Scanner(System.in);
         int input;
         do {
@@ -30,8 +34,12 @@ public class Application {
                 case 2: // 메뉴 등록
                     break;
                 case 3: // 메뉴 삭제
+                    deleteMenu(sc);
+
                     break;
                 case 4: // 메뉴 업데이트
+
+                    break;
             }
 
 
@@ -42,5 +50,18 @@ public class Application {
         } while(input != 5);
         System.out.println("프로그램이 종료 됩니다.");
 
+    }
+
+    public static void deleteMenu(Scanner sc){
+        System.out.print("삭제하고 싶은 메뉴 코드를 입력 하세요: ");
+        int menuCode = sc.nextInt();
+        MenuDTO deletingMenu = new MenuDTO(menuCode,"",0,0,"N");
+        int result = registDAO.deleteMenu(con, deletingMenu);
+
+        if(result > 0) {
+            System.out.println("해당 메뉴가 삭제되었습니다.");
+        } else {
+            System.out.println("메뉴 삭제에 실패하였습니다.\n메뉴코드를 다시 확인해주세요.");
+        }
     }
 }

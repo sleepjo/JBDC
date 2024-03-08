@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="11093c0e-2c5f-45ed-85dd-7309570840c3" name="Changes" comment="init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sleepjo/mapper/menu-query.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sleepjo/mapper/menu-query.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sleepjo/run/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sleepjo/run/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chap01-connection" beforeDir="false" afterPath="$PROJECT_DIR$/../chap01-connection" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
