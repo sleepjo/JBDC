@@ -4,6 +4,7 @@ import sleepjo.model.dao.MenuDAO;
 import sleepjo.model.dto.MenuDTO;
 
 import java.sql.Connection;
+import java.util.List;
 import java.util.Scanner;
 
 import static sleepjo.common.JDBCTemplate.getConnection;
@@ -30,6 +31,7 @@ public class Application {
 
             switch (input){
                 case 1 : // 전체메뉴조회
+                    selectMenu();
                     break;
                 case 2: // 메뉴 등록
 
@@ -51,6 +53,14 @@ public class Application {
         } while(input != 5);
         System.out.println("프로그램이 종료 됩니다.");
 
+        /* 지은. 전체 메뉴 조회 */
+
+        List<MenuDTO> menuList = registDAO.selectMenuList(con);
+
+        for(MenuDTO menu : menuList){
+            System.out.println("menu = " + menu);
+        }
+
     }
     public static void insertMenu(Scanner sc){
         System.out.println("추가하고싶은 메뉴 ");
@@ -66,6 +76,16 @@ public class Application {
             System.out.println("해당 메뉴가 삭제되었습니다.");
         } else {
             System.out.println("메뉴 삭제에 실패하였습니다.\n메뉴코드를 다시 확인해주세요.");
+        }
+    }
+    public static void selectMenu() {
+
+        /* 지은. 전체 메뉴 조회 */
+
+        List<MenuDTO> menuList = registDAO.selectMenuList(con);
+
+        for (MenuDTO menu : menuList) {
+            System.out.println("menu = " + menu);
         }
     }
 }

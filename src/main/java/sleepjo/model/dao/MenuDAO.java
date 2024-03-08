@@ -4,9 +4,9 @@ import sleepjo.model.dto.MenuDTO;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import static sleepjo.common.JDBCTemplate.close;
@@ -38,5 +38,40 @@ public class MenuDAO {
             close(pstmt);
         }
         return result;
+    }
+
+    public List<MenuDTO> selectMenuList(Connection con) {
+        Statement stmt = null;
+        ResultSet rset = null;
+        MenuDTO row = null;
+        List<MenuDTO> menuList = null;
+
+
+        String query = prop.getProperty("selectMenuList");
+
+        try {
+            stmt = con.createStatement();
+            rset = stmt.executeQuery(query);
+            menuList = new ArrayList<>();
+            while (rset.next()){
+                row = new MenuDTO();
+                row.setMenuCode(rset.getInt("MENU_CODE"));
+                row.setMenuName(rset.getString("MENU_NAME"));
+                row.setMenuPrice(rset.getInt("MENU_PRICE"));
+                row.setCategoryCode(rset.getInt("CATEGORY_CODE"));
+                row.setOrderableStatus(rset.getString("ORDERABLE_STATUS"));
+
+                menuList.add(row);
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }finally {
+            close(stmt);
+            close(rset);
+        }
+
+        return menuList;
+
     }
 }
