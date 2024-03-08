@@ -20,8 +20,13 @@ public class Application {
         Scanner sc = new Scanner(System.in);
         int input;
         do {
-            System.out.println("1. 전체 메뉴 조회\n2. 메뉴 등록\n3. 메뉴 삭제\n4. 메뉴 업데이트\n5. 프로그램 종료");
-            System.out.println("========================");
+            System.out.println("**********************");
+            System.out.println("*   1. 전체 메뉴 조회   *\n" +
+                    "*   2. 메뉴 등록       *\n" +
+                    "*   3. 메뉴 삭제       * \n" +
+                    "*   4. 메뉴 업데이트    *\n" +
+                    "*   5. 프로그램 종료    *");
+            System.out.println("**********************");
             System.out.print("입력: ");
             input = sc.nextInt();
             if(input > 5 || input < 0) {
@@ -41,6 +46,7 @@ public class Application {
 
                     break;
                 case 4: // 메뉴 업데이트
+                    updateMenu(sc);
 
                     break;
             }
@@ -97,6 +103,24 @@ public class Application {
             System.out.println("메뉴 삭제에 실패하였습니다.\n메뉴코드를 다시 확인해주세요.");
         }
     }
+
+    public static void updateMenu (Scanner sc){
+
+
+        while (true) {
+            System.out.print("등록 메뉴의 코드를 입력해주세요. : ");
+            int menuCode = sc.nextInt();
+            System.out.print("수정하실 메뉴의 이름을 입력해주세요 : ");
+            sc.nextLine();
+            String menuName = sc.nextLine();
+            System.out.println("판매 메뉴에 등록이 완료되었습니다. ");
+
+            System.out.println("또 수정하실 메뉴가 있으신가요? (예/아니오) : ");
+            String answer = sc.nextLine();
+            if (answer.equals("아니오")) {
+                break;}
+        }
+  
     public static void selectMenu() {
 
         /* 지은. 전체 메뉴 조회 */
@@ -106,5 +130,6 @@ public class Application {
         for (MenuDTO menu : menuList) {
             System.out.println("menu = " + menu);
         }
+
     }
 }

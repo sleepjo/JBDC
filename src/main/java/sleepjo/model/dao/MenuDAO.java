@@ -34,11 +34,39 @@ public class MenuDAO {
             result = pstmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        } finally{
-            close(pstmt);
+        } finally {
+            close(stmt);
+            close(rset);
         }
         return result;
     }
+
+    public int updateNewMenu(Connection con, MenuDTO newMenu) {
+
+        PreparedStatement pstmt = null;
+
+        int result = 0;
+
+        String query = prop.getProperty("UpdateMenu");
+
+        try {
+            pstmt = con.prepareStatement(query);
+
+            pstmt.setInt(1, newMenu.getMenuCode());
+            pstmt.setString(2, newMenu.getMenuName());
+
+            result = pstmt.executeUpdate();
+            System.out.println(pstmt);
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            close(stmt);
+            close(rset);
+        }
+        return result;
+    }
+  
     public int insertMenu(Connection con, MenuDTO newMenu){
         PreparedStatement pstmt = null;
         int result = 0;
@@ -54,6 +82,9 @@ public class MenuDAO {
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }finally {
+            close(stmt);
+            close(rset);
         }
         return result;
     }
