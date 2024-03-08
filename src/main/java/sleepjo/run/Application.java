@@ -32,6 +32,7 @@ public class Application {
                 case 1 : // 전체메뉴조회
                     break;
                 case 2: // 메뉴 등록
+
                     break;
                 case 3: // 메뉴 삭제
                     deleteMenu(sc);
@@ -50,6 +51,9 @@ public class Application {
         } while(input != 5);
         System.out.println("프로그램이 종료 됩니다.");
 
+    }
+    public static void insertMenu(Scanner sc){
+        System.out.println("추가하고싶은 메뉴 ");
     }
 
     public static void deleteMenu(Scanner sc){

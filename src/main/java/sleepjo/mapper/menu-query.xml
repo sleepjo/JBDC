@@ -9,4 +9,11 @@
         where menu_code = ?
 
     </entry>
+
+    <entry key="insertMenu">
+        INSERT INTO TBL_MENU
+        (MENU_CODE, MENU_NAME, MENU_PRICE, CATEGORY_CODE, ORDERABLE_STATUS)
+        VALUES
+        (?, ?, ?, ?, ?)
+    </entry>
 </properties>
