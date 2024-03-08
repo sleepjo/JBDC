@@ -4,6 +4,7 @@ import sleepjo.model.dao.MenuDAO;
 import sleepjo.model.dto.MenuDTO;
 
 import java.sql.Connection;
+import java.util.List;
 import java.util.Scanner;
 
 import static sleepjo.common.JDBCTemplate.getConnection;
@@ -49,6 +50,14 @@ public class Application {
 
         } while(input != 5);
         System.out.println("프로그램이 종료 됩니다.");
+
+        /* 지은. 전체 메뉴 조회 */
+
+        List<MenuDTO> menuList = registDAO.selectMenuList(con);
+
+        for(MenuDTO menu : menuList){
+            System.out.println("menu = " + menu);
+        }
 
     }
 
