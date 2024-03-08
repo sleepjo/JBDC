@@ -19,7 +19,6 @@ public class MenuDTO {
     }
 
 
-
     public int getMenuCode() {
         return menuCode;
     }

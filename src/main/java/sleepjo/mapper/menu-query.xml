@@ -9,10 +9,9 @@
     </entry>
 
     <entry key="UpdateMenu">
-        INSERT INTO TBL_MENU
-        (MENU_CODE, MENU_NAME)
-        VALUES
-        (?,?)
+        Update  TBL_MENU
+        SET MENU_NAME=?
+        WHERE MENU_CODE=?
     </entry>
     <entry key="selectMenuList">
         SELECT * FROM TBL_MENU;

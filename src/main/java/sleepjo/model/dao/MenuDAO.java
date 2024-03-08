@@ -14,64 +14,56 @@ import static sleepjo.common.JDBCTemplate.close;
 public class MenuDAO {
     private Properties prop = new Properties();
 
-    public MenuDAO(){
+    public MenuDAO() {
         try {
-            prop.loadFromXML( new FileInputStream("src/main/java/sleepjo/mapper/menu-query.xml"));
+            prop.loadFromXML(new FileInputStream("src/main/java/sleepjo/mapper/menu-query.xml"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public int deleteMenu(Connection con, MenuDTO menu){
+    public int deleteMenu(Connection con, MenuDTO menu) {
         PreparedStatement pstmt = null;
         int result = 0;
 
         String query = prop.getProperty("deleteMenu");
 
-        try{
+        try {
             pstmt = con.prepareStatement(query);
             pstmt.setInt(1, menu.getMenuCode());
             result = pstmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } finally {
-            close(stmt);
-            close(rset);
+            close(pstmt);
         }
         return result;
     }
 
-    public int updateNewMenu(Connection con, MenuDTO newMenu) {
-
+    public int UpdateMenu(Connection con, int menuCode, String menuName) {
         PreparedStatement pstmt = null;
-
         int result = 0;
-
-        String query = prop.getProperty("UpdateMenu");
-
+        String query = prop.getProperty("insertMenu");
         try {
             pstmt = con.prepareStatement(query);
-
-            pstmt.setInt(1, newMenu.getMenuCode());
-            pstmt.setString(2, newMenu.getMenuName());
+            pstmt.setInt(2, menuCode);
+            pstmt.setString(1, menuName);
 
             result = pstmt.executeUpdate();
-            System.out.println(pstmt);
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } finally {
-            close(stmt);
-            close(rset);
+            close(pstmt);
         }
         return result;
     }
-  
-    public int insertMenu(Connection con, MenuDTO newMenu){
+
+    public int insertMenu(Connection con, MenuDTO newMenu) {
         PreparedStatement pstmt = null;
         int result = 0;
         String query = prop.getProperty("insertMenu");
-        try{
+        try {
             pstmt = con.prepareStatement(query);
             pstmt.setInt(1, newMenu.getMenuCode());
             pstmt.setString(2, newMenu.getMenuName());
@@ -82,12 +74,12 @@ public class MenuDAO {
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        }finally {
-            close(stmt);
-            close(rset);
+        } finally {
+            close(pstmt);
         }
         return result;
     }
+
     public List<MenuDTO> selectMenuList(Connection con) {
         Statement stmt = null;
         ResultSet rset = null;
@@ -101,7 +93,7 @@ public class MenuDAO {
             stmt = con.createStatement();
             rset = stmt.executeQuery(query);
             menuList = new ArrayList<>();
-            while (rset.next()){
+            while (rset.next()) {
                 row = new MenuDTO();
                 row.setMenuCode(rset.getInt("MENU_CODE"));
                 row.setMenuName(rset.getString("MENU_NAME"));
@@ -114,7 +106,7 @@ public class MenuDAO {
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        }finally {
+        } finally {
             close(stmt);
             close(rset);
         }
@@ -122,4 +114,5 @@ public class MenuDAO {
         return menuList;
 
     }
+
 }

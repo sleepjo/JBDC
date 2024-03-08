@@ -105,8 +105,6 @@ public class Application {
     }
 
     public static void updateMenu (Scanner sc){
-
-
         while (true) {
             System.out.print("등록 메뉴의 코드를 입력해주세요. : ");
             int menuCode = sc.nextInt();
@@ -119,17 +117,20 @@ public class Application {
             String answer = sc.nextLine();
             if (answer.equals("아니오")) {
                 break;}
+
+            int result = registDAO.UpdateMenu(con,menuCode,menuName);
         }
-  
+
+    }
     public static void selectMenu() {
 
-        /* 지은. 전체 메뉴 조회 */
+            /* 지은. 전체 메뉴 조회 */
 
-        List<MenuDTO> menuList = registDAO.selectMenuList(con);
+            List<MenuDTO> menuList = registDAO.selectMenuList(con);
 
-        for (MenuDTO menu : menuList) {
-            System.out.println("menu = " + menu);
-        }
+            for (MenuDTO menu : menuList) {
+                System.out.println("menu = " + menu);
+            }
 
     }
 }
