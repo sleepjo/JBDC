@@ -34,7 +34,7 @@ public class Application {
                     selectMenu();
                     break;
                 case 2: // 메뉴 등록
-
+                    insertMenu(sc);
                     break;
                 case 3: // 메뉴 삭제
                     deleteMenu(sc);
@@ -44,6 +44,7 @@ public class Application {
 
                     break;
             }
+            System.out.println("=======================");
 
 
 
@@ -63,7 +64,25 @@ public class Application {
 
     }
     public static void insertMenu(Scanner sc){
-        System.out.println("추가하고싶은 메뉴 ");
+        System.out.print("추가하고싶은 메뉴 코드: ");
+        int menuCode = sc.nextInt();
+        System.out.print("추가하고싶은 메뉴 이름: ");
+        String menuName = sc.next();
+        System.out.print("추가하고싶은 메뉴 가격: ");
+        int menuPrice = sc.nextInt();
+        System.out.print("추가하고싶은 메뉴의 카테고리 코드: ");
+        int categoryCode = sc.nextInt();
+        System.out.print("추가하고싶은 메뉴의 주문가능한 상태: ");
+        String os = sc.next();
+
+        MenuDTO newMenu = new MenuDTO(menuCode,menuName,menuPrice,categoryCode,os);
+        int result = registDAO.insertMenu(con, newMenu);
+        if(result > 0) {
+            System.out.println("해당 메뉴가 추가되었습니다.");
+        } else {
+            System.out.println("메뉴 추가에 실패하였습니다.\n메뉴 코드를 다시 확인해주세요.");
+        }
+
     }
 
     public static void deleteMenu(Scanner sc){

@@ -22,7 +22,7 @@ public class MenuDAO {
         }
     }
 
-    public int deleteMenu(Connection con, MenuDTO newMenu){
+    public int deleteMenu(Connection con, MenuDTO menu){
         PreparedStatement pstmt = null;
         int result = 0;
 
@@ -30,7 +30,7 @@ public class MenuDAO {
 
         try{
             pstmt = con.prepareStatement(query);
-            pstmt.setInt(1, newMenu.getMenuCode());
+            pstmt.setInt(1, menu.getMenuCode());
             result = pstmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -39,7 +39,24 @@ public class MenuDAO {
         }
         return result;
     }
+    public int insertMenu(Connection con, MenuDTO newMenu){
+        PreparedStatement pstmt = null;
+        int result = 0;
+        String query = prop.getProperty("insertMenu");
+        try{
+            pstmt = con.prepareStatement(query);
+            pstmt.setInt(1, newMenu.getMenuCode());
+            pstmt.setString(2, newMenu.getMenuName());
+            pstmt.setInt(3, newMenu.getMenuPrice());
+            pstmt.setInt(4, newMenu.getCategoryCode());
+            pstmt.setString(5, newMenu.getOrderableStatus());
+            result = pstmt.executeUpdate();
 
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return result;
+    }
     public List<MenuDTO> selectMenuList(Connection con) {
         Statement stmt = null;
         ResultSet rset = null;
