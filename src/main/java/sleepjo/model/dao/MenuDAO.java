@@ -16,7 +16,7 @@ public class MenuDAO {
 
     public MenuDAO(){
         try {
-            prop.loadFromXML( new FileInputStream("src/main/java/com/ohgiraffers/mapper/menu-query.xml"));
+            prop.loadFromXML( new FileInputStream("src/main/java/sleepjo/mapper/menu-query.xml"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
