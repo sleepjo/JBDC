@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11093c0e-2c5f-45ed-85dd-7309570840c3" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sleepjo/common/JDBCTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sleepjo/config/connection-info.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sleepjo/run/Application.java" afterDir="false" />
+    <list default="true" id="11093c0e-2c5f-45ed-85dd-7309570840c3" name="Changes" comment="init">
       <change beforePath="$PROJECT_DIR$/../chap01-connection" beforeDir="false" afterPath="$PROJECT_DIR$/../chap01-connection" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 1
@@ -64,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709869842779</updated>
-      <workItem from="1709869843830" duration="937000" />
+      <workItem from="1709869843830" duration="1155000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -82,7 +82,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
