@@ -30,7 +30,7 @@ public class JDBCTemplate {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
+        // 123
         return con;
     }
 

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11093c0e-2c5f-45ed-85dd-7309570840c3" name="Changes" comment="init">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chap01-connection" beforeDir="false" afterPath="$PROJECT_DIR$/../chap01-connection" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1709869842779</updated>
-      <workItem from="1709869843830" duration="1585000" />
+      <workItem from="1709869843830" duration="2075000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
