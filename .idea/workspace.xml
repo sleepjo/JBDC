@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11093c0e-2c5f-45ed-85dd-7309570840c3" name="Changes" comment="init">
-      <change beforePath="$PROJECT_DIR$/src/main/java/sleepjo/mapper/menu-query.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sleepjo/mapper/menu-query.xml" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sleepjo/model/dao/MenuDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sleepjo/model/dao/MenuDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sleepjo/run/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sleepjo/run/Application.java" afterDir="false" />
     </list>
@@ -29,6 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
@@ -51,14 +53,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Gradle.JDBC1 [:Application.main()].executor": "Run",
+
+    "Gradle.JDBC [:Application.main()].executor": "Run",
     "Gradle.JDBC_Project [:Application.main()].executor": "Run",
     "Notification.DisplayName-DoNotAsk-Vcs Notifications": "VCS notifications",
     "Notification.DoNotAsk-Vcs Notifications": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "seung",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/wassabik/Desktop/JDBC",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,6 +94,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
+        <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -109,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1709869842779</updated>
       <workItem from="1709869843830" duration="2352000" />
-      <workItem from="1709880961790" duration="1432000" />
+      <workItem from="1709881246054" duration="2524000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />

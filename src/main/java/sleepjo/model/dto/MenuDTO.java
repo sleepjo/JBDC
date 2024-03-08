@@ -62,13 +62,12 @@ public class MenuDTO {
 
     @Override
     public String toString() {
-        return "MenuDTO{" +
+        return
                 "menuCode=" + menuCode +
                 ", menuName='" + menuName + '\'' +
                 ", menuPrice=" + menuPrice +
                 ", categoryCode=" + categoryCode +
-                ", orderableStatus='" + orderableStatus + '\'' +
-                '}';
+                ", orderableStatus='" + orderableStatus + '\'';
     }
 }
 
