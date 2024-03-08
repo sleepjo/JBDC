@@ -53,20 +53,8 @@ public class Application {
             System.out.println("=======================");
 
 
-
-
-
-
         } while(input != 5);
         System.out.println("프로그램이 종료 됩니다.");
-
-        /* 지은. 전체 메뉴 조회 */
-
-        List<MenuDTO> menuList = registDAO.selectMenuList(con);
-
-        for(MenuDTO menu : menuList){
-            System.out.println("menu = " + menu);
-        }
 
     }
     public static void insertMenu(Scanner sc){
@@ -105,7 +93,8 @@ public class Application {
     }
 
     public static void updateMenu (Scanner sc){
-        while (true) {
+        int result = 0;
+
             System.out.print("등록 메뉴의 코드를 입력해주세요. : ");
             int menuCode = sc.nextInt();
             System.out.print("수정하실 메뉴의 이름을 입력해주세요 : ");
@@ -113,13 +102,16 @@ public class Application {
             String menuName = sc.nextLine();
             System.out.println("판매 메뉴에 등록이 완료되었습니다. ");
 
-            System.out.println("또 수정하실 메뉴가 있으신가요? (예/아니오) : ");
-            String answer = sc.nextLine();
-            if (answer.equals("아니오")) {
-                break;}
 
-            int result = registDAO.UpdateMenu(con,menuCode,menuName);
+            result = registDAO.UpdateMenu(con,menuCode,menuName);
+
+        if(result > 0) {
+            System.out.println("해당 메뉴가 수정되었습니다.");
+        } else {
+            System.out.println("메뉴 수정에 실패하였습니다.\n메뉴코드를 다시 확인해주세요.");
         }
+
+
 
     }
     public static void selectMenu() {

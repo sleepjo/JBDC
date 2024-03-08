@@ -23,10 +23,13 @@ public class MenuDAO {
     }
 
     public int deleteMenu(Connection con, MenuDTO menu) {
+        System.out.println("1");
         PreparedStatement pstmt = null;
+        System.out.println("2");
         int result = 0;
 
         String query = prop.getProperty("deleteMenu");
+        System.out.println("3");
 
         try {
             pstmt = con.prepareStatement(query);
@@ -41,14 +44,20 @@ public class MenuDAO {
     }
 
     public int UpdateMenu(Connection con, int menuCode, String menuName) {
+        System.out.println("1");
         PreparedStatement pstmt = null;
+        System.out.println("2");
         int result = 0;
-        String query = prop.getProperty("insertMenu");
+        String query = prop.getProperty("UpdateMenu");
+        System.out.println("3");
+        System.out.println("======="+query);
         try {
             pstmt = con.prepareStatement(query);
             pstmt.setInt(2, menuCode);
             pstmt.setString(1, menuName);
 
+
+            System.out.println("11111111"+pstmt.toString());
             result = pstmt.executeUpdate();
 
         } catch (SQLException e) {

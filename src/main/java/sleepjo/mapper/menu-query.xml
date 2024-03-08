@@ -9,8 +9,8 @@
     </entry>
 
     <entry key="UpdateMenu">
-        Update  TBL_MENU
-        SET MENU_NAME=?
+        Update TBL_MENU
+        SET MENU_NAME= ?
         WHERE MENU_CODE=?
     </entry>
     <entry key="selectMenuList">

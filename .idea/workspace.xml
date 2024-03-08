@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11093c0e-2c5f-45ed-85dd-7309570840c3" name="Changes" comment="init">
-
+    <list default="true" id="11093c0e-2c5f-45ed-85dd-7309570840c3" name="Changes" comment="이지은_최종">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sleepjo/mapper/menu-query.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sleepjo/mapper/menu-query.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sleepjo/model/dao/MenuDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sleepjo/model/dao/MenuDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sleepjo/run/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sleepjo/run/Application.java" afterDir="false" />
     </list>
@@ -20,6 +21,23 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="JDBC_Project" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -30,7 +48,6 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
@@ -51,32 +68,30 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-
-    "Gradle.JDBC [:Application.main()].executor": "Run",
-    "Gradle.JDBC_Project [:Application.main()].executor": "Run",
-    "Notification.DisplayName-DoNotAsk-Vcs Notifications": "VCS notifications",
-    "Notification.DoNotAsk-Vcs Notifications": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/wassabik/Desktop/JDBC",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/wassabik/Desktop/Lecture/03_JDBC/JDBC_Project/src/main/java/org/example/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.JDBC [:Application.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.JDBC_Project [:Application.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-Vcs Notifications&quot;: &quot;VCS notifications&quot;,
+    &quot;Notification.DoNotAsk-Vcs Notifications&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/wassabik/Desktop/Lecture/03_JDBC/JDBC_Project/src/main/java/org/example/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sleepjo.run.Application" />
@@ -95,15 +110,10 @@
       <list>
         <item itemvalue="Application.Application" />
         <item itemvalue="Application.Application" />
+        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-20.0.2-corretto-20.0.2.1-4caba194b151-d89c1816" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -114,7 +124,6 @@
       <option name="presentableId" value="Default" />
       <updated>1709869842779</updated>
       <workItem from="1709869843830" duration="2352000" />
-      <workItem from="1709881246054" duration="2524000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -132,7 +141,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709878523134</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="이지은_최종">
+      <option name="closed" value="true" />
+      <created>1709881392176</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709881392176</updated>
+    </task>
+    <task id="LOCAL-00004" summary="이지은_최종">
+      <option name="closed" value="true" />
+      <created>1709882546155</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709882546155</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,7 +166,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="이지은" />
+    <MESSAGE value="이지은_최종" />
+    <option name="LAST_COMMIT_MESSAGE" value="이지은_최종" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
