@@ -18,7 +18,10 @@ public class MenuDTO {
         this.orderableStatus = orderableStatus;
     }
 
-
+    public MenuDTO(int menuCode, String menuName) {
+        this.menuCode = menuCode;
+        this.menuName = menuName;
+    }
 
     public int getMenuCode() {
         return menuCode;
