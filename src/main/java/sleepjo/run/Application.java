@@ -52,6 +52,14 @@ public class Application {
         } while(input != 5);
         System.out.println("프로그램이 종료 됩니다.");
 
+        /* 지은. 전체 메뉴 조회 */
+
+        List<MenuDTO> menuList = registDAO.selectMenuList(con);
+
+        for(MenuDTO menu : menuList){
+            System.out.println("menu = " + menu);
+        }
+
     }
 
     public static void deleteMenu(Scanner sc){
