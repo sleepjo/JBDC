@@ -39,4 +39,28 @@ public class MenuDAO {
         }
         return result;
     }
+    public int insertNewMenu(Connection con, MenuDTO newMenu) {
+
+        PreparedStatement pstmt = null;
+
+        int result = 0;
+
+        String query = prop.getProperty("UpdateMenu");
+
+        try {
+            pstmt = con.prepareStatement(query);
+
+            pstmt.setInt(1, newMenu.getMenuCode());
+            pstmt.setString(2, newMenu.getMenuName());
+
+            result = pstmt.executeUpdate();
+            System.out.println(pstmt);
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            close(pstmt);
+        }
+        return result;
+    }
 }

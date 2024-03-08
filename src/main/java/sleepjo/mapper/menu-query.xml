@@ -4,9 +4,14 @@
 
 
     <entry key="deleteMenu">
-
         delete from tbl_menu
         where menu_code = ?
+    </entry>
 
+    <entry key="UpdateMenu">
+        INSERT INTO TBL_MENU
+        (MENU_CODE, MENU_NAME)
+        VALUES
+        (?,?)
     </entry>
 </properties>
