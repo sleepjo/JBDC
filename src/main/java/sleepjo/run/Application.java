@@ -1,8 +1,10 @@
 package sleepjo.run;
 
 import sleepjo.model.dao.MenuDAO;
+import sleepjo.model.dto.MenuDTO;
 
 import java.sql.Connection;
+import java.util.List;
 import java.util.Scanner;
 
 import static sleepjo.common.JDBCTemplate.getConnection;
@@ -24,6 +26,14 @@ public class Application {
                 System.out.println("============================");
             }
         } while(input != 5);
+
+        /* 지은. 전체 메뉴 조회 */
+
+        List<MenuDTO> menuList = registDAO.selectMenuList(con);
+
+        for(MenuDTO menu : menuList){
+            System.out.println("menu = " + menu);
+        }
 
     }
 }

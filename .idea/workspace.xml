@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11093c0e-2c5f-45ed-85dd-7309570840c3" name="Changes" comment="init">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sleepjo/common/JDBCTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sleepjo/common/JDBCTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sleepjo/mapper/menu-query.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sleepjo/mapper/menu-query.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sleepjo/model/dao/MenuDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sleepjo/model/dao/MenuDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sleepjo/run/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sleepjo/run/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chap01-connection" beforeDir="false" afterPath="$PROJECT_DIR$/../chap01-connection" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +28,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -50,12 +52,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Gradle.JDBC_Project [:Application.main()].executor": "Run",
-    "Notification.DisplayName-DoNotAsk-Vcs Notifications": "VCS notifications",
-    "Notification.DoNotAsk-Vcs Notifications": "true",
+    "Gradle.JDBC [:Application.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "feature/select",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -64,11 +64,6 @@
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "/Users/wassabik/Desktop/Lecture/03_JDBC/JDBC_Project/src/main/java/org/example/Main.java",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
   }
 }]]></component>
   <component name="RunManager">
