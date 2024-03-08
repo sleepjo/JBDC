@@ -31,6 +31,7 @@ public class Application {
 
             switch (input){
                 case 1 : // 전체메뉴조회
+                    selectMenu();
                     break;
                 case 2: // 메뉴 등록
                     break;
@@ -71,6 +72,16 @@ public class Application {
             System.out.println("해당 메뉴가 삭제되었습니다.");
         } else {
             System.out.println("메뉴 삭제에 실패하였습니다.\n메뉴코드를 다시 확인해주세요.");
+        }
+    }
+    public static void selectMenu() {
+
+        /* 지은. 전체 메뉴 조회 */
+
+        List<MenuDTO> menuList = registDAO.selectMenuList(con);
+
+        for (MenuDTO menu : menuList) {
+            System.out.println("menu = " + menu);
         }
     }
 }
