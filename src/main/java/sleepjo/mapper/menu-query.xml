@@ -3,4 +3,10 @@
 <properties>
 
 
+    <entry key="deleteMenu">
+
+        delete from tbl_menu
+        where tbl_menu = ?
+
+    </entry>
 </properties>
