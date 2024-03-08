@@ -9,4 +9,7 @@
         where menu_code = ?
 
     </entry>
+    <entry key="selectMenuList">
+        SELECT * FROM TBL_MENU;
+    </entry>
 </properties>
