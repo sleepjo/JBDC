@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11093c0e-2c5f-45ed-85dd-7309570840c3" name="Changes" comment="이지은_최종" />
+    <list default="true" id="11093c0e-2c5f-45ed-85dd-7309570840c3" name="Changes" comment="이지은_최종">
+      <change beforePath="$PROJECT_DIR$/src/main/java/sleepjo/model/dao/MenuDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sleepjo/model/dao/MenuDAO.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +55,7 @@
     "Notification.DoNotAsk-Vcs Notifications": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/select",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
